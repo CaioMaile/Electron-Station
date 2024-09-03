@@ -8,11 +8,40 @@
     <title>Aplicaçãoes--Station</title>
 </head>
 <body>
+    
     <div class="barra">
         <div class="barra-logo">
             <img src="./icon.png" alt="logo" height="32">
         </div>
-        <div class="barra-menu"></div>
+        <div class="barra-menu">
+            <a href="./PaginaInicio.html">Inicio</a>
+            <a href="./PaginaJogos.html">Jogos</a>
+        </div>
+        <div class="barra-botoes">
+            <button onclick="electron.Minimizar()"> - </button>
+            <button onclick="electron.Maximizar()"> o </button>
+            <button onclick="electron.Fechar()"> x </button>
+        </div>
     </div>
+
+    <div class="principal">
+        <div class="principal-ofertas">
+            <div class="oferta">    
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Netflix-new-icon.png/600px-Netflix-new-icon.png"alt="oferta">
+                <div>
+                    <span> Categoria </span>
+                    <a href="https://www.netflix.com/br/"> Acessar </a>
+                </div>
+            </div>
+            <div class="oferta">    
+                <img src="data:image/png;base64,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">
+                <div>
+                    <span> Categoria </span>
+                    <a href="https://open.spotify.com/"> Acessar </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

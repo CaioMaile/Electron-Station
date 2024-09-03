@@ -12,5 +12,9 @@ app.whenReady()
             title: "Station",
             webPreferences: { preload: join(__dirname, ("preload.js"))}
         })
+        ipcMain.on("Minimizar", () => {janela.minimize()})
+        ipcMain.on("Maximizar", () => {janela.isMaximized? janela.unmaximize() : janela.maximize()})
+        ipcMain.on("Fechar", () => {app.quit})
+
         janela.loadFile( join(__dirname, "./public/PaginaInicio.html"))
     })
